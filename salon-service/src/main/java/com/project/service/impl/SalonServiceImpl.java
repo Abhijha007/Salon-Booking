@@ -1,3 +1,4 @@
+
 package com.project.service.impl;
 
 import com.project.model.Salon;
@@ -39,7 +40,7 @@ public class SalonServiceImpl implements SalonService {
 
         Salon existingSalon = salonRepository.findById(salonId).orElse(null);
 
-        if(existingSalon != null && salon.getOwnerId().equals(user.getId())){
+        if(existingSalon != null){
             existingSalon.setCity(salon.getCity());
             existingSalon.setEmail(salon.getEmail());
             existingSalon.setName(salon.getName());
@@ -49,6 +50,8 @@ public class SalonServiceImpl implements SalonService {
             existingSalon.setOpenTime(salon.getOpenTime());
             existingSalon.setCloseTime(salon.getCloseTime());
             existingSalon.setOwnerId(user.getId());
+
+            return salonRepository.save(existingSalon);
 
         }
         throw new Exception("salon not exist");
