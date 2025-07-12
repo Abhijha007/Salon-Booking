@@ -15,16 +15,17 @@ public class ServiceOfferingController {
 
     private final ServiceOfferingService serviceOfferingService;
 
-    @GetMapping("/salon/{salonId}")
-    public ResponseEntity<Set<ServiceOffering>> getServicesBySalonId(
-            @PathVariable Long salonId,
-            @RequestParam(required = false) Long categoryId
-    ){
-        Set<ServiceOffering> serviceOfferings=serviceOfferingService
-                .getAllServiceBySalonId(salonId, categoryId);
+    @PostMapping
+    public ResponseEntity<ServiceOffering> createService(@RequestBody ServiceDTO serviceDTO){
+        SalonDTO salonDTO=new SalonDTO();
+        salonDTO.setId(1L);
+
+        CategoryDTO categoryDTO=new CategoryDTO();
+        categoryDTO.setId(serviceDTO.getCategoryId());
+
+        ServiceOffering serviceOfferings=serviceOfferingService
+                .createService(salonDTO, serviceDTO, categoryDTO);
         return ResponseEntity.ok(serviceOfferings);
 
-    }
-
-
+    }  
 }
