@@ -10,7 +10,7 @@ import java.util.Set;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/service-offering")
+@RequestMapping("/api/service-offering/salon-owner")
 public class ServiceOfferingController {
 
     private final ServiceOfferingService serviceOfferingService;
