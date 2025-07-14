@@ -1,5 +1,6 @@
 package com.project.model;
 
+import com.project.domain.BookingStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -24,6 +25,8 @@ public class Booking {
 
    @ElementCollection   //to create the separate table in the database
     private Set<Long> serviceIds;
+
+    private BookingStatus status = BookingStatus.PENDING;
 
    private int totalPrice;
 }
