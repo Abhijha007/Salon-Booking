@@ -6,8 +6,13 @@ import com.project.dto.ServiceDTO;
 import com.project.dto.UserDTO;
 import com.project.model.Booking;
 
+import java.util.List;
+import java.util.Set;
 
 public interface BookingService {
    Booking createBooking(BookingRequest booking, UserDTO user,
                           SalonDTO salon, Set<ServiceDTO> serviceDTOSet);
+
+   List<Booking> getBookingsByCustomer(Long customerId);
+   List<Booking> getBookingsBySalon(Long salonId);
 }
