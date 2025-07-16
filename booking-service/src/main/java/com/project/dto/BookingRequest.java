@@ -1,4 +1,7 @@
 package com.project.dto;
 
 public class BookingRequest {
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
+    private Set<Long> serviceIds;
 }
