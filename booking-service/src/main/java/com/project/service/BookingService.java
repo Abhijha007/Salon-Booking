@@ -1,11 +1,13 @@
 package com.project.service;
 
+import com.project.domain.BookingStatus;
 import com.project.dto.BookingRequest;
 import com.project.dto.SalonDTO;
 import com.project.dto.ServiceDTO;
 import com.project.dto.UserDTO;
 import com.project.model.Booking;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
