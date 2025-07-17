@@ -6,6 +6,7 @@ import com.project.dto.SalonDTO;
 import com.project.dto.ServiceDTO;
 import com.project.dto.UserDTO;
 import com.project.model.Booking;
+import com.project.model.SalonReport;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -20,4 +21,5 @@ public interface BookingService {
    Booking getBookingById(Long id);
    Booking updateBooking(Long bookingId, BookingStatus status );
    List<Booking> getBookingByDate(LocalDate date, Long salonId);
+   SalonReport getSalonReport(Long salonId);
 }
