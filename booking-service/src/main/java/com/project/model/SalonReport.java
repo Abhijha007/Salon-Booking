@@ -1,5 +1,8 @@
 package com.project.model;
 
+import lombok.Data;
+
+@Data
 public class SalonReport {
     private Long salonId;
     private String salonName;
