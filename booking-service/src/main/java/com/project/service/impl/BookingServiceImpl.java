@@ -15,9 +15,11 @@ import java.util.List;
 import java.util.Set;
 
 @Service
+@RequiredArgsConstructor
 public class BookingServiceImpl implements BookingService{
 
-  
+  private final BookingRepository bookingRepository;
+
   @Override
     public Booking createBooking(BookingRequest booking, UserDTO user, SalonDTO salon, Set<ServiceDTO> serviceDTOSet) {
         return null;
