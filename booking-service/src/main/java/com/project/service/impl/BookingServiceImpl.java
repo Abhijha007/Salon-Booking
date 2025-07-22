@@ -36,6 +36,12 @@ public class BookingServiceImpl implements BookingService{
         return null;
     }
 
+  public Boolean isTimeSlotAvailable(SalonDTO salonDTO,
+                                       LocalDateTime bookingStartTime,
+                                       LocalDateTime bookingEndTime){
+        return true;
+    }
+
     @Override
     public List<Booking> getBookingsByCustomer(Long customerId) {
         return List.of();
