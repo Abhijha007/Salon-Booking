@@ -25,6 +25,10 @@ public class BookingServiceImpl implements BookingService{
                                  UserDTO user, 
                                  SalonDTO salon, 
                                  Set<ServiceDTO> serviceDTOSet) {
+    int totalDuration = serviceDTOSet.stream()
+                        .mapToInt(ServiceDTO::getDuration)
+                        .sum();
+      
         return null;
     }
 
