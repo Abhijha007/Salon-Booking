@@ -8,6 +8,7 @@ import com.project.dto.UserDTO;
 import com.project.model.Booking;
 import com.project.model.SalonReport;
 import com.project.service.BookingService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
