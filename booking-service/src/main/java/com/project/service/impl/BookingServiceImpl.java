@@ -42,6 +42,10 @@ public class BookingServiceImpl implements BookingService{
 
         LocalDateTime salonOpenTime = salonDTO.getOpenTime().atDate(bookingStartTime.toLocalDate());
         LocalDateTime salonCloseTime = salonDTO.getCloseTime().atDate(bookingEndTime.toLocalDate());
+    
+    if(bookingStartTime.isBefore(salonOpenTime) || bookingEndTime.isAfter(salonCloseTime)){
+            throw new Exception("booking time must be within salon's working hours");
+        }
         return true;
     }
 
