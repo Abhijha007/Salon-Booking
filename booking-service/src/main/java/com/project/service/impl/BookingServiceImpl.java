@@ -40,6 +40,8 @@ public class BookingServiceImpl implements BookingService{
                                        LocalDateTime bookingStartTime,
                                        LocalDateTime bookingEndTime) throws Exception{
 
+    List<Booking> existingBookings= getBookingsBySalon(salonDTO.getId());
+
         LocalDateTime salonOpenTime = salonDTO.getOpenTime().atDate(bookingStartTime.toLocalDate());
         LocalDateTime salonCloseTime = salonDTO.getCloseTime().atDate(bookingEndTime.toLocalDate());
     
