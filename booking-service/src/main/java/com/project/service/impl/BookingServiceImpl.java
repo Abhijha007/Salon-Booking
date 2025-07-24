@@ -53,8 +53,9 @@ public class BookingServiceImpl implements BookingService{
             LocalDateTime existingBookingStartTime=existingBooking.getStartTime();
             LocalDateTime existingBookingEndTime = existingBooking.getEndTime();
 
-      if(bookingStartTime.isBefore(existingBookingEndTime)){
-
+      if(bookingStartTime.isBefore(existingBookingEndTime)
+        && bookingEndTime.isAfter(existingBookingStartTime)){
+        throw new Exception("Slot not available, choose different time.");
             }
         }
         return true;
