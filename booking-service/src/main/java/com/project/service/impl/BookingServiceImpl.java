@@ -59,7 +59,9 @@ public class BookingServiceImpl implements BookingService{
             }
 
       if(bookingStartTime.isEqual(existingBookingStartTime)
-                    || bookingEndTime.isEqual(existingBookingEndTime)){}
+                    || bookingEndTime.isEqual(existingBookingEndTime)){
+        throw new Exception("Slot not available, choose different time.");
+                    }
         }
         return true;
     }
