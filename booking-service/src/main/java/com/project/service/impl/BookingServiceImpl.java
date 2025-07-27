@@ -33,6 +33,11 @@ public class BookingServiceImpl implements BookingService{
     LocalDateTime bookingEndTime = bookingStartTime.plusMinutes(totalDuration);
 
     Boolean isSlotAvailable = isTimeSlotAvailable(salon,bookingStartTime,bookingEndTime);
+
+    int totalPrice = serviceDTOSet.stream()
+                .mapToInt(ServiceDTO::getPrice)
+                .sum();
+      
         return null;
     }
 
