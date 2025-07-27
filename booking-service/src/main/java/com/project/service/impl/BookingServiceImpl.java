@@ -32,7 +32,7 @@ public class BookingServiceImpl implements BookingService{
     LocalDateTime bookingStartTime = booking.getStartTime();
     LocalDateTime bookingEndTime = bookingStartTime.plusMinutes(totalDuration);
 
-      
+    Boolean isSlotAvailable = isTimeSlotAvailable(salon,bookingStartTime,bookingEndTime);
         return null;
     }
 
