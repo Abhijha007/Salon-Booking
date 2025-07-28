@@ -37,6 +37,10 @@ public class BookingServiceImpl implements BookingService{
     int totalPrice = serviceDTOSet.stream()
                 .mapToInt(ServiceDTO::getPrice)
                 .sum();
+
+    Set<Long> idList=serviceDTOSet.stream()
+                .map(ServiceDTO::getId)
+                .collect(Collectors.toSet());  
       
         return null;
     }
