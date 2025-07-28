@@ -40,7 +40,16 @@ public class BookingServiceImpl implements BookingService{
 
     Set<Long> idList=serviceDTOSet.stream()
                 .map(ServiceDTO::getId)
-                .collect(Collectors.toSet());  
+                .collect(Collectors.toSet());
+
+      Booking newBooking=new Booking();
+        newBooking.setCustomerId(user.getId());
+        newBooking.setSalonId(salon.getId());
+        newBooking.setServiceIds(idList);
+        newBooking.setStatus(BookingStatus.PENDING);
+        newBooking.setStartTime(bookingStartTime);
+        newBooking.setEndTime(bookingEndTime);
+        newBooking.setTotalPrice(totalPrice);
       
         return null;
     }
