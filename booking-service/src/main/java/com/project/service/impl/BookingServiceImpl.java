@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -37,7 +38,7 @@ public class BookingServiceImpl implements BookingService{
     int totalPrice = serviceDTOSet.stream()
                 .mapToInt(ServiceDTO::getPrice)
                 .sum();
-
+      
     Set<Long> idList=serviceDTOSet.stream()
                 .map(ServiceDTO::getId)
                 .collect(Collectors.toSet());
@@ -51,7 +52,7 @@ public class BookingServiceImpl implements BookingService{
         newBooking.setEndTime(bookingEndTime);
         newBooking.setTotalPrice(totalPrice);
       
-        return null;
+        return bookingRepository.save(newBooking);
     }
 
   public Boolean isTimeSlotAvailable(SalonDTO salonDTO,
