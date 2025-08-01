@@ -105,6 +105,9 @@ public class BookingServiceImpl implements BookingService{
 
     @Override
     public Booking updateBooking(Long bookingId, BookingStatus status) {
+      Booking booking = getBookingById(bookingId);
+
+        booking.setStatus(status);
         return null;
     }
 
