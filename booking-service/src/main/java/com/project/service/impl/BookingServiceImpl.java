@@ -117,7 +117,10 @@ public class BookingServiceImpl implements BookingService{
       if(date==null){
             return allBookings;
         }
-        return List.of();
+        return allBookings.stream()
+                .filter(booking -> isSameDate(booking.getStartTime(),date) ||
+                        isSameDate(booking.getEndTime(), date))
+                .collect(Collectors.toList());;
     }
 
     @Override
@@ -125,5 +128,6 @@ public class BookingServiceImpl implements BookingService{
         return null;
     }
 }
+
 
 
