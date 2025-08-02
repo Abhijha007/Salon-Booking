@@ -113,6 +113,7 @@ public class BookingServiceImpl implements BookingService{
 
     @Override
     public List<Booking> getBookingByDate(LocalDate date, Long salonId) {
+       List<Booking> allBookings=getBookingsBySalon(salonId);
         return List.of();
     }
 
@@ -121,3 +122,4 @@ public class BookingServiceImpl implements BookingService{
         return null;
     }
 }
+
