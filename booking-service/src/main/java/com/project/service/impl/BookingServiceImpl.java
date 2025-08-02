@@ -123,11 +123,16 @@ public class BookingServiceImpl implements BookingService{
                 .collect(Collectors.toList());;
     }
 
+  private boolean isSameDate(LocalDateTime dateTime, LocalDate date){
+            return dateTime.toLocalDate().isEqual(date);
+    }
+
     @Override
     public SalonReport getSalonReport(Long salonId) {
         return null;
     }
 }
+
 
 
 
