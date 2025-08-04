@@ -134,9 +134,15 @@ public class BookingServiceImpl implements BookingService{
         int totalEarnings=bookings.stream()
                 .mapToInt(Booking::getTotalPrice)
                 .sum();
+
+      Integer totalBooking=bookings.size();
+
+      
+      
         return null;
     }
 }
+
 
 
 
