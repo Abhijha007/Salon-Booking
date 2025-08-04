@@ -137,11 +137,14 @@ public class BookingServiceImpl implements BookingService{
 
       Integer totalBooking=bookings.size();
 
-      
+      List<Booking> cancelledBookings=bookings.stream()
+                .filter(booking -> booking.getStatus().equals(BookingStatus.CANCELLED))
+                .collect(Collectors.toList());
       
         return null;
     }
 }
+
 
 
 
