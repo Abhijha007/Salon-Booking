@@ -129,9 +129,15 @@ public class BookingServiceImpl implements BookingService{
 
     @Override
     public SalonReport getSalonReport(Long salonId) {
+      List<Booking> bookings = getBookingsBySalon(salonId);
+
+        int totalEarnings=bookings.stream()
+                .mapToInt(Booking::getTotalPrice)
+                .sum();
         return null;
     }
 }
+
 
 
 
