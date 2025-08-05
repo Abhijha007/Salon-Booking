@@ -145,11 +145,18 @@ public class BookingServiceImpl implements BookingService{
                 .mapToDouble(Booking::getTotalPrice)
                 .sum();
 
+      SalonReport report = new SalonReport();
+        report.setSalonId(salonId);
+        report.setCancelledBookings(cancelledBookings.size());
+        report.setTotalBookings(totalBooking);
+        report.setTotalEarnings(totalEarnings);
+        report.setTotalRefund(totalRefund);
+        report.setTotalBookings(totalBooking);
       
-      
-        return null;
+        return report;
     }
 }
+
 
 
 
