@@ -131,8 +131,8 @@ public class BookingServiceImpl implements BookingService{
     public SalonReport getSalonReport(Long salonId) {
       List<Booking> bookings = getBookingsBySalon(salonId);
 
-        int totalEarnings=bookings.stream()
-                .mapToInt(Booking::getTotalPrice)
+        Double totalEarnings=bookings.stream()
+                .mapToDouble(Booking::getTotalPrice)
                 .sum();
 
       Integer totalBooking=bookings.size();
@@ -144,6 +144,7 @@ public class BookingServiceImpl implements BookingService{
         return null;
     }
 }
+
 
 
 
