@@ -25,8 +25,11 @@ public class BookingController {
             ){
     UserDTO user = new UserDTO();
         user.setId(1L);
+
+    SalonDTO salon = new SalonDTO();
             }
 }
+
 
 
 
