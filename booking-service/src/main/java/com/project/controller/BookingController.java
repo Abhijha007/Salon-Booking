@@ -18,6 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookingController {
 
   private final BookingService bookingService;
+
+  public ResponseEntity<Booking> createBooking(
+            @RequestParam Long salonId,
+            @RequestBody BookingRequest bookingRequest
+            ){
+    
+            }
 }
+
 
 
