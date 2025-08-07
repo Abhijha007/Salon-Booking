@@ -23,9 +23,11 @@ public class BookingController {
             @RequestParam Long salonId,
             @RequestBody BookingRequest bookingRequest
             ){
-    
+    UserDTO user = new UserDTO();
+        user.setId(1L);
             }
 }
+
 
 
 
