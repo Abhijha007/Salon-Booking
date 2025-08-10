@@ -29,9 +29,16 @@ public class BookingController {
     SalonDTO salon = new SalonDTO();
     salon.setId(salonId);
 
-    
+    Set<ServiceDTO> serviceDTOSet = new HashSet<>();
+
+        ServiceDTO serviceDTO = new ServiceDTO();
+        serviceDTO.setId(1L);
+        serviceDTO.setPrice(399);
+        serviceDTO.setDuration(45);
+        serviceDTO.setName("hair cut for men");
             }
 }
+
 
 
 
