@@ -36,8 +36,11 @@ public class BookingController {
         serviceDTO.setPrice(399);
         serviceDTO.setDuration(45);
         serviceDTO.setName("hair cut for men");
+
+    serviceDTOSet.add(serviceDTO);
             }
 }
+
 
 
 
