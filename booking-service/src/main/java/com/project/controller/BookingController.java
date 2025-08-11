@@ -48,9 +48,10 @@ public class BookingController {
                 salon,
                 serviceDTOSet);
 
-    return null;
+    return ResponseEntity.ok(booking);
     }
 }
+
 
 
 
