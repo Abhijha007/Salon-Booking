@@ -42,9 +42,15 @@ public class BookingController {
 
     serviceDTOSet.add(serviceDTO);
 
+    Booking booking = bookingService.createBooking(bookingRequest,
+                user,
+                salon,
+                serviceDTOSet);
+
     return null;
     }
 }
+
 
 
 
