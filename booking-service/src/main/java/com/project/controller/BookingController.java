@@ -58,7 +58,12 @@ public class BookingController {
 
              return null;
     }
+  private Set<BookingDTO> getBookingDTOs(List<Booking> bookings){
+
+        return Set.of();
+    }
 }
+
 
 
 
