@@ -50,10 +50,15 @@ public class BookingController {
 
     return ResponseEntity.ok(booking);
     }
-  public ResponseEntity<Set<Booking>> getBookingByCustomer(){
+  public ResponseEntity<Set<Booking>> getBookingByCustomer(
+    
+  ){
+     List<Booking> booking = bookingService.getBookingsByCustomer(1L);
 
+             return null;
     }
 }
+
 
 
 
