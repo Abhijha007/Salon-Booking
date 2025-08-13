@@ -1,5 +1,11 @@
 package com.project.dto;
 
+import com.project.domain.BookingStatus;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+import java.util.Set;
+
 @Data
 public class BookingDTO {
     private Long id;
@@ -10,5 +16,6 @@ public class BookingDTO {
     private Set<Long> serviceIds;
     private BookingStatus status = BookingStatus.PENDING;
 }
+
 
 
