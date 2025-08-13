@@ -1,5 +1,6 @@
 package com.project.dto;
 
+@Data
 public class BookingDTO {
     private Long id;
     private Long salonId;
@@ -9,4 +10,5 @@ public class BookingDTO {
     private Set<Long> serviceIds;
     private BookingStatus status = BookingStatus.PENDING;
 }
+
 
