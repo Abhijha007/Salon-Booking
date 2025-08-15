@@ -1,5 +1,8 @@
 package com.project.mapper;
 
+import com.project.dto.BookingDTO;
+import com.project.model.Booking;
+
 public class BookingMapper {
   public static BookingDTO toDTO(Booking booking) {
         BookingDTO bookingDTO = new BookingDTO();
@@ -12,4 +15,5 @@ public class BookingMapper {
         return bookingDTO;
     }
 }
+
 
