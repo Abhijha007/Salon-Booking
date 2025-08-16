@@ -60,9 +60,13 @@ public class BookingController {
     }
   private Set<BookingDTO> getBookingDTOs(List<Booking> bookings){
 
-        return Set.of();
+        return bookings.stream()
+                .map(booking -> {
+                    return BookingMapper.toDTO(booking);
+                }).collect(Collectors.toSet());
     }
 }
+
 
 
 
