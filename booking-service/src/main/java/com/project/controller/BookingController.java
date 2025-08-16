@@ -1,5 +1,6 @@
 package com.project.controller;
 
+import com.project.dto.*;
 import com.project.dto.BookingRequest;
 import com.project.dto.SalonDTO;
 import com.project.dto.UserDTO;
@@ -66,6 +67,7 @@ public class BookingController {
                 }).collect(Collectors.toSet());
     }
 }
+
 
 
 
