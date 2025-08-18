@@ -53,6 +53,8 @@ public class BookingController {
 
     return ResponseEntity.ok(booking);
     }
+
+  @GetMapping("/customer")
   public ResponseEntity<Set<BookingDTO>> getBookingByCustomer(
     
   ){
@@ -68,6 +70,7 @@ public class BookingController {
                 }).collect(Collectors.toSet());
     }
 }
+
 
 
 
