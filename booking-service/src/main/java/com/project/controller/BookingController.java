@@ -53,7 +53,7 @@ public class BookingController {
 
     return ResponseEntity.ok(booking);
     }
-  public ResponseEntity<Set<Booking>> getBookingByCustomer(
+  public ResponseEntity<Set<BookingDTO>> getBookingByCustomer(
     
   ){
      List<Booking> booking = bookingService.getBookingsByCustomer(1L);
@@ -68,6 +68,7 @@ public class BookingController {
                 }).collect(Collectors.toSet());
     }
 }
+
 
 
 
