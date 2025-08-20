@@ -71,8 +71,12 @@ public class BookingController {
     }
   public ResponseEntity<Set<BookingDTO>> getBookingById(
             @PathVariable Long bookingId
-    )
+    ){
+        List<Booking> bookings = bookingService.getBookingsBySalon(1L);
+        return ResponseEntity.ok(getBookingDTOs(bookings));
+    }
 }
+
 
 
 
