@@ -69,7 +69,11 @@ public class BookingController {
                     return BookingMapper.toDTO(booking);
                 }).collect(Collectors.toSet());
     }
+  public ResponseEntity<Set<BookingDTO>> getBookingById(
+            @PathVariable Long bookingId
+    )
 }
+
 
 
 
