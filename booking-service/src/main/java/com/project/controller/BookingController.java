@@ -62,6 +62,13 @@ public class BookingController {
 
              return ResponseEntity.ok(getBookingDTOs(bookings));
     }
+
+  public ResponseEntity<Set<BookingDTO>> getBookingsBySalon(){
+        List<Booking> bookings=bookingService.getBookingsBySalon(1L);
+
+        return ResponseEntity.ok(getBookingDTOs(bookings));
+    }
+  
   private Set<BookingDTO> getBookingDTOs(List<Booking> bookings){
 
         return bookings.stream()
@@ -77,6 +84,7 @@ public class BookingController {
         return ResponseEntity.ok(getBookingDTOs(bookings));
     }
 }
+
 
 
 
