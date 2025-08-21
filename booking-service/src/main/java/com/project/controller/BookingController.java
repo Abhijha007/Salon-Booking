@@ -62,7 +62,7 @@ public class BookingController {
 
              return ResponseEntity.ok(getBookingDTOs(bookings));
     }
-
+  @GetMapping("/salon")
   public ResponseEntity<Set<BookingDTO>> getBookingsBySalon(){
         List<Booking> bookings=bookingService.getBookingsBySalon(1L);
 
@@ -84,6 +84,7 @@ public class BookingController {
         return ResponseEntity.ok(getBookingDTOs(bookings));
     }
 }
+
 
 
 
