@@ -77,13 +77,14 @@ public class BookingController {
                 }).collect(Collectors.toSet());
     }
   @GetMapping("/{bookingId}")
-  public ResponseEntity<Set<BookingDTO>> getBookingById(
+  public ResponseEntity<BookingDTO> getBookingById(
             @PathVariable Long bookingId
     ){
         List<Booking> bookings = bookingService.getBookingsBySalon(1L);
         return ResponseEntity.ok(getBookingDTOs(bookings));
     }
 }
+
 
 
 
