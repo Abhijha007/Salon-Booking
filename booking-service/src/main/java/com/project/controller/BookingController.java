@@ -80,10 +80,11 @@ public class BookingController {
   public ResponseEntity<BookingDTO> getBookingById(
             @PathVariable Long bookingId
     ) throws Exception{
-        List<Booking> bookings = bookingService.getBookingsBySalon(1L);
-        return ResponseEntity.ok();
+        Booking booking = bookingService.getBookingsById(bookingId);
+        return ResponseEntity.ok(BookingMapper.toDTO(booking));
     }
 }
+
 
 
 
