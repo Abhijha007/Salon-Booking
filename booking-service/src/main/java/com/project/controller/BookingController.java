@@ -79,11 +79,12 @@ public class BookingController {
   @GetMapping("/{bookingId}")
   public ResponseEntity<BookingDTO> getBookingById(
             @PathVariable Long bookingId
-    ){
+    ) throws Exception{
         List<Booking> bookings = bookingService.getBookingsBySalon(1L);
-        return ResponseEntity.ok(getBookingDTOs(bookings));
+        return ResponseEntity.ok();
     }
 }
+
 
 
 
