@@ -87,8 +87,9 @@ public class BookingController {
     public ResponseEntity<BookingDTO> updateBookingStatus(
             @PathVariable Long bookingId,
             @RequestParam BookingStatus status
-            ){}
+            )throws Exception{}
 }
+
 
 
 
