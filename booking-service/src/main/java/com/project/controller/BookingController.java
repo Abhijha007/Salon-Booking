@@ -83,7 +83,13 @@ public class BookingController {
         Booking booking = bookingService.getBookingsById(bookingId);
         return ResponseEntity.ok(BookingMapper.toDTO(booking));
     }
+  @PutMapping("/{bookingId}")
+    public ResponseEntity<BookingDTO> updateBookingStatus(
+            @PathVariable Long bookingId,
+            @RequestParam BookingStatus status
+            ){}
 }
+
 
 
 
