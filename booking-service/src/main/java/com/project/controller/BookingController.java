@@ -87,8 +87,12 @@ public class BookingController {
     public ResponseEntity<BookingDTO> updateBookingStatus(
             @PathVariable Long bookingId,
             @RequestParam BookingStatus status
-            )throws Exception{}
+            )throws Exception{
+      Booking booking = bookingService.updateBooking(bookingId, status);
+        return ResponseEntity.ok(BookingMapper.toDTO(booking));
+            }
 }
+
 
 
 
