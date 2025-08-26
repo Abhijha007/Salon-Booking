@@ -83,7 +83,7 @@ public class BookingController {
         Booking booking = bookingService.getBookingsById(bookingId);
         return ResponseEntity.ok(BookingMapper.toDTO(booking));
     }
-  @PutMapping("/{bookingId}")
+  @PutMapping("/{bookingId}/status")
     public ResponseEntity<BookingDTO> updateBookingStatus(
             @PathVariable Long bookingId,
             @RequestParam BookingStatus status
@@ -92,6 +92,7 @@ public class BookingController {
         return ResponseEntity.ok(BookingMapper.toDTO(booking));
             }
 }
+
 
 
 
