@@ -91,7 +91,13 @@ public class BookingController {
       Booking booking = bookingService.updateBooking(bookingId, status);
         return ResponseEntity.ok(BookingMapper.toDTO(booking));
             }
+  @GetMapping("/slot/salon/{salonId}/date/{date}")
+    public ResponseEntity<BookingDTO> getBookedSlot(
+            @PathVariable Long salonId,
+            @RequestParam LocalDate date
+            ){}
 }
+
 
 
 
