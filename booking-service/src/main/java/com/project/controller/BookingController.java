@@ -95,8 +95,11 @@ public class BookingController {
     public ResponseEntity<BookingDTO> getBookedSlot(
             @PathVariable Long salonId,
             @RequestParam LocalDate date
-            )throws Exception{}
+            )throws Exception{
+      List<Booking> booking = (List<Booking>) bookingService.getBookingByDate(date, salonId);
+            }
 }
+
 
 
 
