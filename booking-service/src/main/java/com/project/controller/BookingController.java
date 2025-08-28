@@ -97,8 +97,10 @@ public class BookingController {
             @RequestParam LocalDate date
             )throws Exception{
       List<Booking> booking = (List<Booking>) bookingService.getBookingByDate(date, salonId);
+      return
             }
 }
+
 
 
 
