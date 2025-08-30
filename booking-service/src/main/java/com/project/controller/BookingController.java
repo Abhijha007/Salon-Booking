@@ -97,9 +97,18 @@ public class BookingController {
             @RequestParam LocalDate date
             )throws Exception{
       List<Booking> bookings = (List<Booking>) bookingService.getBookingByDate(date, salonId);
+
+      List<BookingSlotDTO> slotsDTOs=bookings.stream()
+                .map(booking ->{
+                  BookingSlotDTO slotDTO = new BookingSlotDTO();
+                  slotDTO.setStartTime(booking.getStartTime());
+                  slotDTO.setEndTime(booking.getEndTime());
+                  return slotDTO;
+                }).collect(Collectors.toList());
       return ResponseEntity.ok(getBookingDTOs(booking));
             }
 }
+
 
 
 
