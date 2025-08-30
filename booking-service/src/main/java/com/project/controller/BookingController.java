@@ -105,9 +105,10 @@ public class BookingController {
                   slotDTO.setEndTime(booking.getEndTime());
                   return slotDTO;
                 }).collect(Collectors.toList());
-      return ResponseEntity.ok(getBookingDTOs(booking));
+      return ResponseEntity.ok(slotsDTOs);
             }
 }
+
 
 
 
