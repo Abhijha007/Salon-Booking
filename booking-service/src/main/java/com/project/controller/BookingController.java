@@ -94,7 +94,7 @@ public class BookingController {
   @GetMapping("/slot/salon/{salonId}/date/{date}")
     public ResponseEntity<BookingDTO> getBookedSlot(
             @PathVariable Long salonId,
-            @RequestParam LocalDate date
+            @RequestParam(required = false) LocalDate date
             )throws Exception{
       List<Booking> bookings = (List<Booking>) bookingService.getBookingByDate(date, salonId);
 
@@ -108,6 +108,7 @@ public class BookingController {
       return ResponseEntity.ok(slotsDTOs);
             }
 }
+
 
 
 
