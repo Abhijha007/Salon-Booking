@@ -108,13 +108,14 @@ public class BookingController {
       return ResponseEntity.ok(slotsDTOs);
             }
 
-  
+  @GetMapping("/report")
   public ResponseEntity<SalonReport> getSalonReport(
     ) throws Exception {
         SalonReport report = bookingService.getSalonReport(1L);
     return ResponseEntity.ok(report);
     }
 }
+
 
 
 
