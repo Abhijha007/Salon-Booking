@@ -107,10 +107,15 @@ public class BookingController {
                 }).collect(Collectors.toList());
       return ResponseEntity.ok(slotsDTOs);
             }
+
+  
   public ResponseEntity<SalonReport> getSalonReport(
     ) throws Exception {
         SalonReport report = bookingService.getSalonReport(1L);
+    return ResponseEntity.ok(report);
+    }
 }
+
 
 
 
