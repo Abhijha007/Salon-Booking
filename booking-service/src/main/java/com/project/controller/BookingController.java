@@ -35,6 +35,7 @@ public class BookingController {
 
     SalonDTO salon = new SalonDTO();
     salon.setId(salonId);
+    salon.setOpenTime(LocalTime.now());
 
     Set<ServiceDTO> serviceDTOSet = new HashSet<>();
 
@@ -115,6 +116,7 @@ public class BookingController {
     return ResponseEntity.ok(report);
     }
 }
+
 
 
 
